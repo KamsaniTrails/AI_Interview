@@ -1,0 +1,132 @@
+/* Container to float navbar on top */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  z-index: 1000;
+}
+/* Premium Light Glass Capsule (Pleasant & Bright 🌟) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 90%;
+  max-width: 1400px;
+
+  padding: 14px 30px;
+
+  background: rgba(218, 214, 214, 0.45);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  box-shadow: 0 10px 30px rgba(31, 38, 135, 0.06),
+              inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Logo Styling (Dark pleasant color for readability) */
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1e293b; /* Premium slate dark blue text */
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+/* Colorful gradient accent on logo */
+.logo-highlight {
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fillColor: transparent;
+}
+
+/* Navigation Menu Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600; /* Text bold chesam clear ga undadaniki */
+  color: #64748b; /* Soft gray-blue color */
+  transition: all 0.3s ease;
+  padding: 5px 0;
+}
+
+/* Hover dynamic state */
+.nav-link:hover, .nav-link.active {
+  color: #0f172a; /* Deep elegant dark */
+}
+
+/* Active Indicator Dot under the text */
+.active-dot {
+  position: absolute;
+  bottom: -8px;
+  left: calc(50% - 4px);
+  width: 8px;
+  height: 8px;
+  background-color: #38bdf8; /* Pleasant Sky Blue */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+}
+
+/* Pleasant Custom Logout Button */
+.logout-btn {
+  background: rgba(239, 68, 68, 0.08); /* Soft minimal red tint */
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3);
+  border-color: #ef4444;
+  transform: translateY(-1.5px);
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    height: auto;
+    position: relative;
+    padding: 15px 0;
+  }
+  .navbar {
+    width: 95%;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 15px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 20px;
+  }
+  .nav-link {
+    font-size: 14px;
+  }
+  .logout-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}

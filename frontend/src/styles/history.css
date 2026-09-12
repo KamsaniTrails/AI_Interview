@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Global App Workspace Override
+   ========================================================================== */
+body {
+    background: #f8fafc; /* మోడ్రన్ ఆఫ్-వైట్ బ్యాక్‌గ్రౌండ్ */
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ==========================================================================
+   Main App Structural Container
+   ========================================================================== */
+.history-container {
+    max-width: 1400px; /* వైడ్ స్క్రీన్స్ కోసం స్పేస్ పెంచాం */
+    margin: 0 auto;
+    padding: 2.5rem;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Real-Time App Header Section
+   ========================================================================== */
+.history-header {
+    text-align: left; /* సెంటర్ నుండి లెఫ్ట్ అలైన్‌మెంట్‌కి మార్చాం (Professional App Look) */
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e2e8f0; /* క్లీన్ డివైడర్ లైన్ */
+}
+
+.history-header h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: #0f172a; /* ముదురు నలుపు/స్లేట్ కలర్ */
+    margin: 0 0 0.5rem 0;
+}
+
+.history-header p {
+    color: #64748b;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* ==========================================================================
+   Asynchronous Grid Matrix
+   ========================================================================== */
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+}
+
+/* ==========================================================================
+   High-Fidelity Real-Time Cards
+   ========================================================================== */
+.history-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0; /* లైట్ బార్డర్ */
+    border-radius: 12px;
+    padding: 1.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* హోవర్ చేసినప్పుడు వచ్చే రియల్-టైమ్ యాప్ గ్లో ఎఫెక్ట్ */
+.history-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 3px;
+    background: transparent;
+    transition: background 0.25s;
+}
+
+.history-card:hover {
+    transform: translateY(-4px);
+    border-color: #6366f1; /* బ్రాండ్ కలర్ బార్డర్ */
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05), 0 8px 8px -6px rgba(0, 0, 0, 0.05);
+}
+
+.history-card:hover::before {
+    background: linear-gradient(90deg, #4f46e5, #818cf8);
+}
+
+/* Card Header Module */
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-top h2 {
+    color: #0f172a;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Live Operational Status Badge */
+.status {
+    background: #e0f2fe; /* లైట్ బ్లూ షేడ్ */
+    color: #0369a1;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px; /* గుండ్రంగా కాకుండా యాప్ స్టైల్ స్క్వేర్ రౌండ్ */
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 1px solid #bae6fd;
+    white-space: nowrap;
+}
+
+/* Data Feed Elements */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1.75rem;
+}
+
+.card-body p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #475569;
+    display: flex;
+    justify-content: space-between; /* లేబుల్ ఒకవైైపు, డేటా ఒకవైైపు వచ్చేలా */
+    align-items: center;
+}
+
+.card-body p strong {
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* స్కోర్‌లు, అంకెలు క్లియర్ గా కనిపించడానికి మోనోస్పేస్ ఫాంట్ */
+.card-body p:first-child {
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #4f46e5;
+}
+
+/* ==========================================================================
+   Action Control Buttons
+   ========================================================================== */
+.view-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: #f1f5f9; /* డీఫాల్ట్‌గా లైట్ కలర్ బటన్ */
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.view-btn:hover {
+    background: #4f46e5; /* హోవర్ చేసినప్పుడు బ్లూ కలర్ అవుతుంది */
+    color: #ffffff;
+    border-color: #4f46e5;
+}
+
+/* ==========================================================================
+   System Empty & Loading States
+   ========================================================================== */
+.empty-history {
+    text-align: center;
+    background: #ffffff;
+    padding: 5rem 2rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.history-loading {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4f46e5;
+    font-weight: 600;
+}
